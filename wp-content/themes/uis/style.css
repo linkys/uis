@@ -1,0 +1,12 @@
+/*
+Theme Name: UIS
+*/
+
+.quickfact-col:nth-child(1) .quickfact-item,
+.quickfact-col:nth-child(3) .quickfact-item,
+.quickfact-col:nth-child(6) .quickfact-item,
+.quickfact-col:nth-child(8) .quickfact-item
+{
+    background: #ff0000;
+    color: #fff;
+}

@@ -1,0 +1,11 @@
+.idea/
+wp-content/ai1wm-backups/
+wp-content/wflogs/
+node_modules
+*.css.map
+*.psd
+npm-cache
+input
+wp-content/cache/
+/wp-content/upgrade/
+/wp-content/plugins/all-in-one-wp-migration/storage/
