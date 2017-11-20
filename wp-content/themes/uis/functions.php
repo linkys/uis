@@ -209,3 +209,12 @@ function my_checkbox_callback($args) {  // Checkbox Callback
 
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
+
+function pre_register_user() {
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    die;
+}
+add_action( 'admin_post_nopriv_register_user', 'pre_register_user' );
+add_action( 'admin_post_register_user', 'pre_register_user' );

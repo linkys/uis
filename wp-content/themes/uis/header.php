@@ -25,7 +25,7 @@
                         ?>
                     </div>
                     <div class="header-actions">
-                        <a href="#" class="login">
+                        <a href="/login" class="login">
                             <i class="i-login"></i>
                             <span>Login</span>
                         </a>
