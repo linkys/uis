@@ -137,6 +137,25 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+
+	/*var equalHeight = function(equalHeightParent , equalHeightChild) {
+		$(equalHeightParent).each(function () {
+			var container = $(this);
+			var mh = 0;
+			container.children(equalHeightChild).each(function () {
+			   $(this).height('auto');
+			   var h_block = parseInt($(this).height());
+			   if(h_block > mh) {
+				  mh = h_block;
+			   };
+			});
+			container.children(equalHeightChild).height(mh);
+		})
+	}
+
+	$(window).on('load resize', equalHeight(".visa-row" , ".visa-col"));
+	$(window).on('load resize', equalHeight(".quickfact-list" , ".quickfact-col"));*/
+
 	//blocks with equal height/////////////////////////
 	$(window).on('load resize', function() {
 		$(".quickfact-list").each(function () {
@@ -150,6 +169,23 @@ jQuery(document).ready(function($) {
 			   };
 			});
 			container.children('.quickfact-col').height(mh);
+		})
+	});
+	//blocks with equal height/////////////////////////
+
+	//blocks with equal height/////////////////////////
+	$(window).on('load resize', function() {
+		$(".visa-row").each(function () {
+			var container = $(this);
+			var mh = 0;
+			container.children('.visa-col').each(function () {
+			   $(this).height('auto');
+			   var h_block = parseInt($(this).height());
+			   if(h_block > mh) {
+				  mh = h_block;
+			   };
+			});
+			container.children('.visa-col').height(mh);
 		})
 	});
 	//blocks with equal height/////////////////////////

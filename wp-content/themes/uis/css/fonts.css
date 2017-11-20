@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icofont';
-	src:	url('../fonts/icofont/icofont.eot?cimoc9');
-	src:	url('../fonts/icofont/icofont.eot?cimoc9#iefix') format('embedded-opentype'),
-			url('../fonts/icofont/icofont.ttf?cimoc9') format('truetype'),
-			url('../fonts/icofont/icofont.woff?cimoc9') format('woff'),
-			url('../fonts/icofont/icofont.svg?cimoc9#icofont') format('svg');
+	src:	url('../fonts/icofont/icofont.eot?78xqra');
+	src:	url('../fonts/icofont/icofont.eot?78xqra#iefix') format('embedded-opentype'),
+			url('../fonts/icofont/icofont.ttf?78xqra') format('truetype'),
+			url('../fonts/icofont/icofont.woff?78xqra') format('woff'),
+			url('../fonts/icofont/icofont.svg?78xqra#icofont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,6 +24,12 @@ i {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.i-password:before {
+	content: "\e907";
+}
+.i-user:before {
+	content: "\e908";
+}
 .i-login:before {
 	content: "\e906";
 }
