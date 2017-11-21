@@ -191,4 +191,7 @@ $(document).ready(function() {
 	//blocks with equal height/////////////////////////
 
 
+	$('select').selectric();
+
+
 }); 
