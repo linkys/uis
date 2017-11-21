@@ -15,7 +15,6 @@
     </div>
 </div>
 <!-- SEO END -->
-<?php endif; ?>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -93,6 +92,7 @@
     </div>
 </footer>
 <!-- FOOTER END -->
+<?php endif; ?>
 
 </div>
 

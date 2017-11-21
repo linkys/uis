@@ -11,9 +11,9 @@ get_header(); ?>
     <div class="user">
         <div class="user-col user-col_bg"></div>
         <div class="user-col user-col_info">
-            <a href="/" class="back-btn">< Back</a>
+            <a href="<?php echo home_url() ?>" class="back-btn">< Back</a>
             <div class="user-wrap">
-                <a href="/" class="user-logo for-img">
+                <a href="<?php echo home_url() ?>" class="user-logo for-img">
                     <img src="<?php echo get_template_directory_uri() ?>/img/assets/logo.png" alt="">
                 </a>
                 <form class="user-form login_form" action="<?php echo esc_url( admin_url('admin-post.php') ) ?>" method="post">

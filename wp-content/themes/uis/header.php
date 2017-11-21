@@ -12,6 +12,7 @@
 <body>
 <div class="wrapper">
 
+    <?php if( get_query_var('pagename') != 'login') : ?>
     <!-- HEADER -->
     <header class="header">
         <div class="header-top">
@@ -81,3 +82,4 @@
         </div>
     </header>
     <!-- HEADER END-->
+<?php endif; ?>
