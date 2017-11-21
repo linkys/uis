@@ -41,6 +41,15 @@ function widgets_init() {
         'before_title' => '',
         'after_title' => '',
     ) );
+    register_sidebar( array(
+        'name' => 'Contact Us',
+        'id' => 'contact-us',
+        'description' => 'Appears on the contact page',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+    ) );
 }
 add_action( 'init', 'widgets_init' );
 

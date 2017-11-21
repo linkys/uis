@@ -24,3 +24,7 @@ Theme Name: UIS
 .register_form .form-group.has-error p.error-message, .login_form .form-group.has-error p.error-message {
     display: block;
 }
+
+#wpgmza_map {
+    float: none !important;
+}
