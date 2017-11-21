@@ -51,6 +51,8 @@ function add_theme_scripts() {
     wp_enqueue_style( 'fonts', get_template_directory_uri() . '/css/fonts.css', array(), false, 'all' );
     wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', array(), false, 'all' );
     wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), false, 'all' );
+    wp_enqueue_style( 'easy-autocomplete', get_template_directory_uri() . '/css/easy-autocomplete.min.css', array(), false, 'all' );
+    wp_enqueue_style( 'flags', get_template_directory_uri() . '/css/flags.css', array(), false, 'all' );
 
     wp_enqueue_script( 'es5-shim', get_template_directory_uri() . '/libs/html5shiv/es5-shim.min.js', array ( 'jquery' ), false, true);
     wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/libs/html5shiv/html5shiv.min.js', array ( 'jquery' ), false, true);
@@ -64,6 +66,7 @@ function add_theme_scripts() {
 
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/libs/jquery/jquery-2.1.3.min.js', array (  ), false, true);
     wp_enqueue_script( 'slick', get_template_directory_uri() . '/libs/slick-1.8.0/slick/slick.min.js', array ( 'jquery' ), false, true);
+    wp_enqueue_script( 'easy-autocomplete', get_template_directory_uri() . '/js/jquery.easy-autocomplete.min.js', array ( 'jquery' ), false, true);
     wp_enqueue_script( 'common-scripts', get_template_directory_uri() . '/js/common.js', array ( 'jquery' ), false, true);
 
 }
@@ -210,11 +213,64 @@ function my_checkbox_callback($args) {  // Checkbox Callback
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
-function pre_register_user() {
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
-    die;
+include_once "functions/auth.php";
+
+add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
+add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
+function my_show_extra_profile_fields( $user ) { ?>
+
+    <h3>Extra profile information</h3>
+
+    <table class="form-table">
+
+        <tr>
+            <th><label for="twitter">Phone</label></th>
+
+            <td>
+                <input type="text" name="phone" id="phone" value="<?php echo esc_attr( get_the_author_meta( 'phone', $user->ID ) ); ?>" class="regular-text" /><br />
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="twitter">Country</label></th>
+
+            <td>
+                <input type="text" name="country" id="country" value="<?php echo esc_attr( get_the_author_meta( 'country', $user->ID ) ); ?>" class="regular-text" /><br />
+            </td>
+        </tr>
+
+    </table>
+<?php }
+
+add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
+
+function my_save_extra_profile_fields( $user_id ) {
+
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+
+    update_user_meta( $user_id, 'phone', $_POST['phone'] );
+    update_user_meta( $user_id, 'country', $_POST['country'] );
+
 }
-add_action( 'admin_post_nopriv_register_user', 'pre_register_user' );
-add_action( 'admin_post_register_user', 'pre_register_user' );
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+    wp_redirect( home_url() );
+    exit();
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
+}
+
+function wpse_11244_restrict_admin() {
+    if ( !current_user_can( 'manage_options' )  && $_SERVER['PHP_SELF'] != '/wp-admin/admin-post.php' ) {
+        wp_redirect( home_url() );
+    }
+}
+add_action( 'admin_init', 'wpse_11244_restrict_admin', 1 );

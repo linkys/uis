@@ -10,3 +10,17 @@ Theme Name: UIS
     background: #ff0000;
     color: #fff;
 }
+
+.easy-autocomplete-container ul li, .easy-autocomplete-container ul .eac-category {
+    text-align: left !important;
+}
+
+.register_form p.error-message, .login_form p.error-message {
+    color: #e82c00;
+    margin-top:0;
+    display: none;
+}
+
+.register_form .form-group.has-error p.error-message, .login_form .form-group.has-error p.error-message {
+    display: block;
+}

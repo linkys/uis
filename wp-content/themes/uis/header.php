@@ -25,10 +25,17 @@
                         ?>
                     </div>
                     <div class="header-actions">
-                        <a href="/login" class="login">
-                            <i class="i-login"></i>
-                            <span>Login</span>
-                        </a>
+                        <?php if(is_user_logged_in()) : ?>
+                            <a href="<?php echo wp_logout_url( home_url() ); ?>" class="login">
+                                <i class="i-login"></i>
+                                <span>Logout</span>
+                            </a>
+                        <?php else: ?>
+                            <a href="/login" class="login">
+                                <i class="i-login"></i>
+                                <span>Login</span>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

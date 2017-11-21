@@ -1,3 +1,4 @@
+<?php if( get_query_var('pagename') != 'login') : ?>
 <!-- SEO -->
 <div class="seo">
     <div class="container">
@@ -14,6 +15,7 @@
     </div>
 </div>
 <!-- SEO END -->
+<?php endif; ?>
 
 <!-- FOOTER -->
 <footer class="footer">

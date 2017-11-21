@@ -17,34 +17,7 @@ get_header(); ?>
 
         <div class="static-block static-block_sm">
             <div class="container">
-                <div class="form-wrap">
-                    <form>
-                        <p class="form-title">Take the first step towards your Canadian Visa</p>
-
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Full name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Phone number">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Country">
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                I agree with the terms of use & privacy policy
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn">Get Started Now!</button>
-                        </div>
-                    </form>
-                </div>
+                <?php show_register_form(); ?>
             </div>
         </div>
     </div>

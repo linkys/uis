@@ -41,35 +41,7 @@ get_header(); ?>
 
         <div class="static-block">
             <div class="container">
-                <div class="form-wrap">
-                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-                        <p class="form-title">Take the first step towards your Canadian Visa</p>
-
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Full name" name="username">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Email" name="email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Phone number" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Country" name="country">
-                        </div>
-                        <div class="form-group">
-                            <label class="checkbox">
-                                <input type="checkbox" name="confirmation">
-                                <span class="checkmark"></span>
-                                I agree with the terms of use & privacy policy
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="hidden" name="action" value="register_user">
-                            <button class="btn">Get Started Now!</button>
-                        </div>
-                    </form>
-                </div>
+                <?php show_register_form(); ?>
             </div>
         </div>
     </div>
