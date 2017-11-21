@@ -623,7 +623,8 @@ MAIN CSS
 
 .form-group .btn {
 	width: 100%;
-	line-height: 48px;
+	padding: 0 20px;
+	line-height: 50px!important;
 	letter-spacing: 1px;
 }
 
@@ -1508,7 +1509,7 @@ MAIN CSS
 /*-------------------USER-------------------*/
 .user {
 	display: flex;
-	min-height: 1080px;
+	min-height: 100vh;
 }
 
 .user-col {
@@ -1835,10 +1836,6 @@ MAIN CSS
 		padding: 50px 0;
 	}
 
-	/*user*/
-	.user {
-		min-height: 800px;
-	}
 }
 
 @media screen and (max-width: 991px) {
@@ -2399,9 +2396,6 @@ MAIN CSS
 	}
 
 	/*user*/
-	.user {
-		min-height: inherit;
-	}
 	.user-col_bg {
 		display: none;
 	}
@@ -2422,7 +2416,6 @@ MAIN CSS
 	.user-logo {
 		margin-bottom: 30px;
 	}
-
 }
 
 @media screen and (max-width: 575px) {
