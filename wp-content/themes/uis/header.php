@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
 
-    <?php if( get_query_var('pagename') != 'login') : ?>
+    <?php if( get_query_var('pagename') != 'login' && get_query_var('pagename') != 'personal-application') : ?>
     <!-- HEADER -->
     <header class="header">
         <div class="header-top">
@@ -27,6 +27,10 @@
                     </div>
                     <div class="header-actions">
                         <?php if(is_user_logged_in()) : ?>
+                            <a href="<?php echo home_url('/personal-application') ; ?>" class="login">
+                                <i class="i-login"></i>
+                                <span>Personal Applications</span>
+                            </a>
                             <a href="<?php echo wp_logout_url( home_url() ); ?>" class="login">
                                 <i class="i-login"></i>
                                 <span>Logout</span>

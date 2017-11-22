@@ -131,7 +131,7 @@ function login_user() {
     } else {
         wp_send_json(array(
             'result' => true,
-            'redirect_url' => site_url('/profile')
+            'redirect_url' => site_url('/personal-application')
         ));
     }
 
@@ -140,6 +140,10 @@ add_action( 'admin_post_nopriv_login_user', 'login_user' );
 add_action( 'admin_post_login_user', 'login_user' );
 
 if($_SERVER['REQUEST_URI'] == '/login/' && is_user_logged_in()) {
+    wp_redirect( site_url());
+    exit;
+}
+if($_SERVER['REQUEST_URI'] == '/personal-application/' && !is_user_logged_in()) {
     wp_redirect( site_url());
     exit;
 }
