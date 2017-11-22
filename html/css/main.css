@@ -1871,6 +1871,11 @@ MAIN CSS
 	border-radius: 2px;
 	box-shadow: inset 2px 2px 3px 0 #e3e3e3;
 }
+.app-form-text::-webkit-input-placeholder {color:#a2a2a2;}
+.app-form-text::-moz-placeholder          {color:#a2a2a2;}
+.app-form-text:-moz-placeholder           {color:#a2a2a2;}
+.app-form-text:-ms-input-placeholder      {color:#a2a2a2;}
+
 .app-form-text_sm {
 	width: 70px;
 }
@@ -1885,7 +1890,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0; 
 }
 .add {
-	position: absolute;
+	/* position: absolute; */
 	font-weight: 500;
 	font-size: 13px;
 	color: #425666;
@@ -1922,6 +1927,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background: #fff;
 	font-size: 13px;
 	color: #a7a7a7;
+	cursor: pointer;
 }
 .app-radio-group-text input:checked ~ span {
 	background: #5a6a78;
@@ -1988,13 +1994,17 @@ input[type=number]::-webkit-outer-spin-button {
 	height: 20px;
 	font-size: 20px;
 	line-height: 20px!important;
+	color: #a2a2a2
 }
 
 
 
 /*datepicker*/
 .datepicker {
+	padding: 0 35px 0 10px;
+	text-align: center;
 	color: #a7a7a7;
+	cursor: pointer;
 }
 
 
@@ -2004,6 +2014,7 @@ input[type=number]::-webkit-outer-spin-button {
 	display: inline-block;
 	margin-bottom: 3px;
 	font-size: 14px;
+	cursor: pointer;
 }
 .radio:last-child {
 	margin-bottom: 0;
@@ -2057,15 +2068,17 @@ input[type=number]::-webkit-outer-spin-button {
 	font-size: 13px;
 	line-height: 34px!important;
 	color: #a2a2a2;
-	cursor: pointer;
 }
 .file_upload input[type=file] {
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: 0
+	width: 0;
+	height: 0;
+	opacity: 0;
 }
 .file_upload .button {
+	position: relative;
 	display: block;
 	float: left;
 	min-width: 190px;
@@ -2081,6 +2094,7 @@ input[type=number]::-webkit-outer-spin-button {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	cursor: pointer;
+	z-index: 9;
 }
 .file_upload .button i {
 	float: right;
