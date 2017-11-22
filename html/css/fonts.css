@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icofont';
-	src:	url('../fonts/icofont/icofont.eot?78xqra');
-	src:	url('../fonts/icofont/icofont.eot?78xqra#iefix') format('embedded-opentype'),
-			url('../fonts/icofont/icofont.ttf?78xqra') format('truetype'),
-			url('../fonts/icofont/icofont.woff?78xqra') format('woff'),
-			url('../fonts/icofont/icofont.svg?78xqra#icofont') format('svg');
+	src:	url('../fonts/icofont/icofont.eot?y3nlg8');
+	src:	url('../fonts/icofont/icofont.eot?y3nlg8#iefix') format('embedded-opentype'),
+			url('../fonts/icofont/icofont.ttf?y3nlg8') format('truetype'),
+			url('../fonts/icofont/icofont.woff?y3nlg8') format('woff'),
+			url('../fonts/icofont/icofont.svg?y3nlg8#icofont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,30 +24,39 @@ i {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.i-password:before {
-	content: "\e907";
-}
-.i-user:before {
-	content: "\e908";
-}
-.i-login:before {
-	content: "\e906";
-}
-.i-facebook:before {
+.i-calendar:before {
 	content: "\e900";
 }
-.i-g-plus:before {
+.i-download:before {
 	content: "\e901";
 }
-.i-instagram:before {
+.i-facebook:before {
 	content: "\e902";
 }
-.i-linkedin:before {
+.i-g-plus:before {
 	content: "\e903";
 }
-.i-phone:before {
+.i-icon:before {
 	content: "\e904";
 }
-.i-world:before {
+.i-instagram:before {
 	content: "\e905";
+}
+.i-linkedin:before {
+	content: "\e906";
+}
+.i-login:before {
+	content: "\e907";
+}
+.i-man-user:before {
+	content: "\e908";
+}
+.i-phone:before {
+	content: "\e909";
+}
+.i-upload:before {
+	content: "\e90a";
+}
+.i-world:before {
+	content: "\e90b";
 }
