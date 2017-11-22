@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>UIS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="libs/slick-1.8.0/slick/slick.css" />
+	<link rel="stylesheet" href="libs/jQuery-Selectric-master/public/selectric.css" />	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="application bg-white">
+			<div class="app-header">
+				<div class="container-md">
+					<div class="app-logo">
+						<a href="#" class="logo for-img">
+							<img src="img/assets/logo.png" alt="">
+						</a>
+					</div>
+
+					<div class="app-title">Personal Application</div>
+
+					<div class="app-progress progress">
+						<div class="progress-step progress-step_current">
+							<div class="step-number">1</div>
+							<div class="step-title">Personal Information</div>
+						</div>
+						<div class="progress-step">
+							<div class="step-number">2</div>
+							<div class="step-title">Optimization and document collection</div>
+						</div>
+						<div class="progress-step">
+							<div class="step-number">3</div>
+							<div class="step-title">Submission</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="app-body">
+				<div class="container-md">
+					<form>
+						<div class="app-row">
+							<div class="app-col app-col-3 m-4">
+								<select class="select_grey">
+									<option value="Chose country">Chose Application</option>
+									<option value="Erez Friedmann">Erez Friedmann</option>
+									<option value="Ronnie Weiss ">Ronnie Weiss </option>
+								</select>
+							</div>
+						</div>
+					
+						<div class="tabs-wrapper">
+							<div class="tabs-header">
+								<div class="tab-toggle tab-toggle_active" data-tab="equal-1">Personal Information</div>
+								<div class="tab-toggle" data-tab="equal-2">Education & Training</div>
+								<div class="tab-toggle" data-tab="equal-3">Work Experience</div>
+								<div class="tab-toggle" data-tab="equal-4">Language Skills</div>
+								<div class="tab-toggle" data-tab="equal-5">Adaptability</div>
+								<div class="tab-toggle" data-tab="equal-6">Dependents</div>
+								<div class="tab-toggle tab-toggle_disabled" data-tab="equal-7">Optimization & Documents</div>
+								<div class="tab-toggle tab-toggle_disabled" data-tab="equal-8">Submission</div>
+							</div>
+							<div class="tabs-body">
+								<div class="tab-content tab-content_active" data-tab="equal-1">
+
+									<div class="app-row">
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">First name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Middle name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Last name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Gender</label>
+												<div class="app-radio-group app-radio-group-text">
+													<label class="radio-text">
+														<input type="radio" name="gender">
+														<span>Female</span>		
+													</label>
+													<label class="radio-text">
+														<input type="radio" name="gender" checked>
+														<span>Male</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Email Address</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">*Another email address</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Phone number</label>
+												<input type="text" class="app-form-text">
+												<a href="#" class="add">+ Add new phone</a>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Country of residence</label>
+												<select>
+													<option value="Chose country">Chose country</option>
+													<option value="country 1">country 1</option>
+													<option value="country 2">country 2</option>
+													<option value="country 3">country 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Street</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">City</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Zip code / Postal code</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Date of birth</label>
+												<div class="input-icon">
+													<input type="text" class="app-form-text datepicker">
+													<i class="i-calendar"></i>
+												</div>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Material status</label>
+												<select>
+													<option value="Single">Single</option>
+													<option value="Married">Married</option>
+													<option value="Widowed">Widowed</option>
+													<option value="Legally Separated">Legally Separated</option>
+													<option value="Common Law Partners">Common Law Partners</option>
+													<option value="Divorced">Divorced</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-4">
+											<div class="app-form-group">
+												<label class="app-form-label">Number of dependent childred under 22:</label>
+												<select>
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">Criminal offences</label> 
+												<select>
+													<option value="You have never been convicted of any criminal offences">You have never been convicted of any criminal offences</option>
+													<option value="You have been convicted in a criminal offence">You have been convicted in a criminal offence</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Have you or any of your immediate family had any serious health problems?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="health">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="health" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>	
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Please upload a clear Copy of your Passport ID Page:</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Please Upload a Utility Bill (not older than 3 months)</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>	
+
+								</div>
+
+
+								<div class="tab-content" data-tab="equal-2">Education & Training</div>
+								<div class="tab-content" data-tab="equal-3">Work Experience</div>
+								<div class="tab-content" data-tab="equal-4">Language Skills</div>
+								<div class="tab-content" data-tab="equal-5">Adaptability</div>
+								<div class="tab-content" data-tab="equal-6">Dependents</div>
+								<div class="tab-content" data-tab="equal-7">Optimization & Documents</div>
+								<div class="tab-content" data-tab="equal-8">Submission</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="app-footer">
+				<div class="container-md">
+					<div class="app-footer-inner clearfix">
+						<a href="#" class="app-footer-btn">
+							Save
+							<i class="i-download"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="hidden"></div>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	
+	<script src="libs/jquery/jquery-2.1.3.min.js"></script>
+	<script src="libs/slick-1.8.0/slick/slick.min.js"></script>
+	<script src="libs/jQuery-Selectric-master/public/jquery.selectric.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+
+
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
