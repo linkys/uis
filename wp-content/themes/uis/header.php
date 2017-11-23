@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
 
-    <?php if( get_query_var('pagename') != 'login' && get_query_var('pagename') != 'personal-application') : ?>
+    <?php if( get_query_var('pagename') != 'login' && !is_profile()) : ?>
     <!-- HEADER -->
     <header class="header">
         <div class="header-top">

@@ -1,7 +1,4 @@
 <?php
-/*
- Template Name: Personal Application Page
-*/
 
 global $post;
 

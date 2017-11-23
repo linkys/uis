@@ -57,7 +57,7 @@ function add_theme_scripts() {
 
     wp_enqueue_style( 'fonts.googleapis', 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900' );
     wp_enqueue_style( 'slick', get_template_directory_uri() . '/libs/slick-1.8.0/slick/slick.css', array(), false, 'all' );
-    if($_SERVER['REQUEST_URI'] == '/personal-application/') {
+    if(is_profile()) {
         wp_enqueue_style( 'selectric', get_template_directory_uri() . '/libs/jQuery-Selectric-master/public/selectric.css', array(), false, 'all' );
         wp_enqueue_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
     }
@@ -79,7 +79,7 @@ function add_theme_scripts() {
 
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/libs/jquery/jquery-2.1.3.min.js', array (  ), false, true);
     wp_enqueue_script( 'slick', get_template_directory_uri() . '/libs/slick-1.8.0/slick/slick.min.js', array ( 'jquery' ), false, true);
-    if($_SERVER['REQUEST_URI'] == '/personal-application/') {
+    if(is_profile()) {
         wp_enqueue_script( 'jquery.selectric', get_template_directory_uri() . '/libs/jQuery-Selectric-master/public/jquery.selectric.js', array ( 'jquery' ), false, true);
         wp_enqueue_script( 'jquery.jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', array (), false, true);
         wp_enqueue_script( 'app-scripts', get_template_directory_uri() . '/js/app-page.js', array ( 'jquery' ), false, true);
@@ -307,3 +307,19 @@ function successful_approval_message($message, $user) {
     return $message;
 }
 add_filter('new_user_approve_approve_user_message', 'successful_approval_message', 10, 2);
+
+add_action('init', function() {
+    $url_path = trim(parse_url(add_query_arg(array()), PHP_URL_PATH), '/');
+
+    if ( $url_path === 'personal-application' ) {
+        locate_template('pages/app-page.php', true); exit;
+    }
+    if ( $url_path === 'personal-application/optimization' ) {
+        locate_template('pages/app-page.php', true); exit;
+    }
+
+});
+
+function is_profile() {
+    return (bool)preg_match('#^\/personal-application#', $_SERVER['REQUEST_URI']);
+}

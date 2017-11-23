@@ -1,4 +1,4 @@
-<?php if( get_query_var('pagename') != 'login' && get_query_var('pagename') != 'personal-application') : ?>
+<?php if( get_query_var('pagename') != 'login' && !is_profile() ) : ?>
 <!-- SEO -->
 <div class="seo">
     <div class="container">
