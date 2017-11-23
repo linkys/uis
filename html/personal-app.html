@@ -68,6 +68,7 @@
 								<div class="tab-toggle tab-toggle_disabled" data-tab="equal-8">Submission</div>
 							</div>
 							<div class="tabs-body">
+
 								<div class="tab-content tab-content_active" data-tab="equal-1">
 
 									<div class="app-row">
@@ -166,7 +167,7 @@
 											<div class="app-form-group">
 												<label class="app-form-label">Date of birth</label>
 												<div class="input-icon">
-													<input type="text" class="app-form-text datepicker">
+													<input type="text" class="app-form-text datepicker" placeholder="dd / mm / yyyy">
 													<i class="i-calendar"></i>
 												</div>
 											</div>
@@ -190,24 +191,26 @@
 										<div class="app-col app-col-4">
 											<div class="app-form-group">
 												<label class="app-form-label">Number of dependent childred under 22:</label>
-												<select>
-													<option value="0">0</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6">6</option>
-													<option value="7">7</option>
-													<option value="8">8</option>
-													<option value="9">9</option>
-													<option value="10">10</option>
-													<option value="11">11</option>
-													<option value="12">12</option>
-													<option value="13">13</option>
-													<option value="14">14</option>
-													<option value="15">15</option>
-												</select>
+												<div class="app-form-text_sm">
+													<select>
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+														<option value="11">11</option>
+														<option value="12">12</option>
+														<option value="13">13</option>
+														<option value="14">14</option>
+														<option value="15">15</option>
+													</select>
+												</div>
 											</div>
 										</div>
 										<div class="app-col app-col-6">
@@ -227,13 +230,13 @@
 												<label class="app-form-label">Have you or any of your immediate family had any serious health problems?</label>
 												<div class="app-radio-group">
 													<label class="radio">
-														<input type="radio" name="health">
+														<input type="radio" name="personal">
 														<span class="pseudo-radio"></span>
 														Yes
 													</label>
 													<br />
 													<label class="radio">
-														<input type="radio" name="health" checked>
+														<input type="radio" name="personal" checked>
 														<span class="pseudo-radio"></span>
 														No
 													</label>
@@ -280,14 +283,876 @@
 
 								</div>
 
+								<div class="tab-content" data-tab="equal-2">
+									
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<p><strong>What is your highest level of education or training? </strong></p>
+										</div>
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">Type of Program </label>
+												<select>
+													<option value="High school diploma">High school diploma</option>
+													<option value="One year program diploma">One year program diploma</option>
+													<option value="Two year program diploma">Two year program diploma</option>
+													<option value="Three year program diploma">Three year program diploma</option>
+													<option value="Post- Secondary degree (Bachelors)">Post- Secondary degree (Bachelors)</option>
+													<option value="Two or more University degrees at Bachelors level">Two or more University degrees at Bachelors level</option>
+													<option value="Professional degree of Law/ Medicine/ Pharmacy/ Dentistry/ Optometry">Professional degree of Law/ Medicine/ Pharmacy/ Dentistry/ Optometry</option>
+													<option value="Masters Degree">Masters Degree</option>
+													<option value="PhD">PhD</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">Program duration</label> 
+												<select>
+													<option value="Less than 1 academic year">Less than 1 academic year</option>
+													<option value="2 Academic years or more but less than 3 years">2 Academic years or more but less than 3 years</option>
+													<option value="3 Academic years or more but less than 4 years">3 Academic years or more but less than 4 years</option>
+													<option value="4 Academic years or more">4 Academic years or more</option>
+												</select>
+											</div>
+										</div>
+									</div>
 
-								<div class="tab-content" data-tab="equal-2">Education & Training</div>
-								<div class="tab-content" data-tab="equal-3">Work Experience</div>
-								<div class="tab-content" data-tab="equal-4">Language Skills</div>
-								<div class="tab-content" data-tab="equal-5">Adaptability</div>
-								<div class="tab-content" data-tab="equal-6">Dependents</div>
-								<div class="tab-content" data-tab="equal-7">Optimization & Documents</div>
-								<div class="tab-content" data-tab="equal-8">Submission</div>
+									<div class="app-row">
+										<div class="app-col app-col-3">
+											<div class="app-form-group">
+												<label class="app-form-label">Field of Study</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-3">
+											<div class="app-form-group">
+												<label class="app-form-label">Country of Study</label> 
+												<select>
+													<option value="Afganistan">Afganistan</option>
+													<option value="Afganistan">Afganistan</option>
+													<option value="Afganistan">Afganistan</option>
+													<option value="Afganistan">Afganistan</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Have you completed this program and received a degree, diploma or certificate?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="education">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="education" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-4">
+											<div class="app-form-group">
+												<label class="app-form-label">Total years of education (from grade 1)</label>
+												<div class="app-form-text_sm">
+													<input type="number" class="app-form-text">
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-3">
+									
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<div class="app-form-group">
+												<label class="app-form-label">How many jobs did you have in the past 10 years which you were paid for at least a year? </label>
+												<div class="app-form-text_sm">
+													<select>
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+														<option value="11">11</option>
+														<option value="12">12</option>
+														<option value="13">13</option>
+														<option value="14">14</option>
+														<option value="15">15</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+
+										<div class="app-col app-col-4">
+											<div class="app-form-group">
+												<label class="app-form-label">Job #1 Description</label>
+												<input type="text" class="app-form-text">
+												<a href="#" class="add">+ Add new job</a>
+											</div>
+										</div>
+
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Job #1 Years of experience</label>
+												<select>
+													<option value="Less than 1 year">Less than 1 year</option>
+													<option value="1 year">1 year</option>
+													<option value="2-3 years">2-3 years</option>
+													<option value="4-5 years">4-5 years</option>
+													<option value="6 years or more">6 years or more</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Do you or your spouse/common law partner have a valid Canadian work permit? </label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="work-1">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="work-1" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Do you or your spouse/common law partner have a job offer from a Canadian employer?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="work-2">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="work-2" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Do you have at least 1 year of care-giving experience (child care or elderly/disabled)? </label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="work-3">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="work-3" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row align-items-end">
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">What is your estimated net worth in US dollars? </label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="Less than $300,000">Less than $300,000</option>
+															<option value="$300,000-$1,599,000">$300,000-$1,599,000</option>
+															<option value="More than $1,600,000">More than $1,600,000</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">How much money (in Canadian dollars) will you have available to transfer when you move to Canada?</label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="At least $12,300">At least $12,300</option>
+															<option value="At least $15,312">At least $15,312</option>
+															<option value="At least $18,825">At least $18,825</option>
+															<option value="At least $22,856">At least $22,856</option>
+															<option value="At least $25,923">At least $25,923</option>
+															<option value="At least $29,236">At least $29,236</option>
+															<option value="At least $32,550">At least $32,550</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Please upload your CV/resume in English/French: </label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-4">
+
+									<div class="app-row">
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">What is your overall level of English?</label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="Very high">Very high</option>
+															<option value="High">High</option>
+															<option value="Basic">Basic</option>
+															<option value="Not at all">Not at all</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">What is your overall level of French? </label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="Very high">Very high</option>
+															<option value="High">High</option>
+															<option value="Basic">Basic</option>
+															<option value="Not at all">Not at all</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<p>What is your level of <strong>English</strong>?</p>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Reading:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Listening:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Writing:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Speaking:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<p>What is your level of <strong>French</strong>?</p>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Reading:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Listening:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Writing:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Speaking:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-5">
+									
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Do you or your spouse / common-law partner have at least 1 year of full-time Canadian work experience on a valid work permit?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="adaptability-1">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-1" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Did you or your spouse/common law partner study in Canada? </label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="adaptability-2">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-2" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Has your spouse/common-law partner completed high school (secondary school)?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="adaptability-3">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-3" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-3">
+														<span class="pseudo-radio"></span>
+														N/A
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Has your spouse/common-law partner done any education or training other than high school (secondary school)?</label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="adaptability-4">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-4" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-4">
+														<span class="pseudo-radio"></span>
+														I do not have a spouse
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<div class="app-form-group">
+												<label class="app-form-label">What is the highest degree or diploma that your spouse/common-law partner has completed after finishing high school</label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="High school diploma (secondary school)">High school diploma (secondary school)</option>
+															<option value="One year post-secondary credential">One year post-secondary credential</option>
+															<option value="Two year post-secondary credential">Two year post-secondary credential</option>
+															<option value="Two or more post-secondary credential, one of which is a three year or longer post-secondary credential">Two or more post-secondary credential, one of which is a three year or longer post-secondary credential</option>
+															<option value="Masters level or Professional degree">Masters level or Professional degree</option>
+															<option value="Doctorate level">Doctorate level</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-6">
+											<div class="app-form-group">
+												<label class="app-form-label">Total years of spouse/common law partner education since grade 1?</label>
+												<div class="app-form-text_sm">
+													<input type="number" class="app-form-text">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Has your spouse/ common-law partner completed (at least) 2 years of post-secondary education in Canada since reaching the age of 17? </label>
+												<div class="app-radio-group">
+													<label class="radio">
+														<input type="radio" name="adaptability-5">
+														<span class="pseudo-radio"></span>
+														Yes
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-5" checked>
+														<span class="pseudo-radio"></span>
+														No
+													</label>
+													<br />
+													<label class="radio">
+														<input type="radio" name="adaptability-5">
+														<span class="pseudo-radio"></span>
+														I do not have a spouse
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<p><strong>What is your spouse/common-law partner level of English?</strong></p>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Reading:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Listening:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Writing:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Speaking:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-12">
+											<p><strong>What is your spouse/common-law partner level of French?</strong></p>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Reading:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Listening:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Writing:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Speaking:</label>
+												<select>
+													<option value="Very high">Very high</option>
+													<option value="High">High</option>
+													<option value="Basic">Basic</option>
+													<option value="Not at all">Not at all</option>
+													<option value="I do not have a spouse">I do not have a spouse</option>
+												</select>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-10">
+											<div class="app-form-group">
+												<label class="app-form-label">Do you or your spouse/common-law partner; have any family members living in Canada?</label>
+												<div class="app-row">
+													<div class="app-col app-col-6">
+														<select>
+															<option value="No Family members in Canada">No Family members in Canada</option>
+															<option value="Parent">Parent</option>
+															<option value="Grandparent">Grandparent</option>
+															<option value="Child">Child</option>
+															<option value="Siblings">Siblings</option>
+															<option value="Aunt">Aunt</option>
+															<option value="Uncle">Uncle</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-6">
+									
+									<div class="app-row">
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">First name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Last name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Date of birth</label>
+												<div class="input-icon">
+													<input type="text" class="app-form-text datepicker" placeholder="dd / mm / yyyy">
+													<i class="i-calendar"></i>
+												</div>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">First name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Last name</label>
+												<input type="text" class="app-form-text">
+											</div>
+										</div>
+										<div class="app-col app-col-5th">
+											<div class="app-form-group">
+												<label class="app-form-label">Date of birth</label>
+												<div class="input-icon">
+													<input type="text" class="app-form-text datepicker" placeholder="dd / mm / yyyy">
+													<i class="i-calendar"></i>
+												</div>
+											</div>
+										</div>
+										<div class="app-col app-col-5th"></div>
+										<div class="app-col app-col-5th"></div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<a href="#" class="add">+ Add more dependentss</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-7">
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload IELTS Results</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload Education Certificate</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload Dependent’s ID’s</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload Police Check</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload Medical Test</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-content" data-tab="equal-8">
+
+									<div class="app-row">
+										<div class="app-col">
+											<div class="app-form-group">
+												<label class="app-form-label">Upload Retainer Agreement</label>
+												<div class="app-file-group">
+													<label class="file_upload clearfix">
+														<span class="button clearfix">
+															Choose file 
+															<i class="i-upload"></i>
+														</span>
+														<mark>No file choosen</mark>
+														<input type="file">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
 							</div>
 						</div>
 					</form>
