@@ -18,7 +18,7 @@ function show_register_form() {
                             <p class="error-message"></p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-text" placeholder="Country" name="country" required>
+                            <input type="text" class="form-text country-select" placeholder="Country" name="country" required>
                             <p class="error-message"></p>
                         </div>
                         <div class="form-group">

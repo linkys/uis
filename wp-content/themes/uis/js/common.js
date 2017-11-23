@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 	//tabs on JS///////////////////////////////////////
 
 	//popup////////////////////////////////////////////
-	$('.js-show-popup').on('click' , function() {
+	/*$('.js-show-popup').on('click' , function() {
 		var dataPopup = $(this).attr("data-popup");
 
 		$(".popup-overlay[data-popup='"+dataPopup+"']").fadeIn('500');
@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 
 	$('.js-close-popup').on('click' , function() {
 		$('.popup-overlay').fadeOut('500');
-	});
+	});*/
 	//popup////////////////////////////////////////////
 
 	if(windowWidth < 992) {

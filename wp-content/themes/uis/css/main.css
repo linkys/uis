@@ -1812,7 +1812,12 @@ MAIN CSS
 
 /*app grid*/
 .app-row {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0 -10px;
+}
+.align-items-end {
+	align-items: flex-end;
 }
 .app-row:after {
 	display: table;
@@ -1824,6 +1829,12 @@ MAIN CSS
 	float: left;
 	padding: 0 10px;
 }
+.app-col-12 {
+	width: 100%;
+}
+.app-col-5th {
+	width: 20%;
+}
 .app-col-3 {
 	width: 25%;
 }
@@ -1833,8 +1844,8 @@ MAIN CSS
 .app-col-6 {
 	width: 50%;
 }
-.app-col-5th {
-	width: 20%;
+.app-col-10 {
+	width: 80%;
 }
 
 
@@ -1860,8 +1871,26 @@ MAIN CSS
 	border-radius: 2px;
 	box-shadow: inset 2px 2px 3px 0 #e3e3e3;
 }
+.app-form-text::-webkit-input-placeholder {color:#a2a2a2;}
+.app-form-text::-moz-placeholder          {color:#a2a2a2;}
+.app-form-text:-moz-placeholder           {color:#a2a2a2;}
+.app-form-text:-ms-input-placeholder      {color:#a2a2a2;}
+
+.app-form-text_sm {
+	width: 70px;
+}
+input[type=number] {
+	text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0; 
+}
 .add {
-	position: absolute;
+	/* position: absolute; */
 	font-weight: 500;
 	font-size: 13px;
 	color: #425666;
@@ -1898,6 +1927,7 @@ MAIN CSS
 	background: #fff;
 	font-size: 13px;
 	color: #a7a7a7;
+	cursor: pointer;
 }
 .app-radio-group-text input:checked ~ span {
 	background: #5a6a78;
@@ -1910,7 +1940,7 @@ MAIN CSS
 .selectric {
 	width: 100%;
 	height: 34px;
-	padding: 0 10px;
+	padding: 0 25px 0 10px; 
 	background: #fff;
 	border: 1px solid #b2c4d4;
 	border-radius: 2px;
@@ -1964,20 +1994,30 @@ MAIN CSS
 	height: 20px;
 	font-size: 20px;
 	line-height: 20px!important;
+	color: #a2a2a2
 }
 
 
 
 /*datepicker*/
 .datepicker {
+	padding: 0 35px 0 10px;
+	text-align: center;
 	color: #a7a7a7;
+	cursor: pointer;
 }
 
 
 
 /*app radio group*/
-.radio:not(:last-child) {
+.radio {
+	display: inline-block;
 	margin-bottom: 3px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.radio:last-child {
+	margin-bottom: 0;
 }
 .radio input[type="radio"] {
 	position: absolute;
@@ -2028,15 +2068,17 @@ MAIN CSS
 	font-size: 13px;
 	line-height: 34px!important;
 	color: #a2a2a2;
-	cursor: pointer;
 }
 .file_upload input[type=file] {
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: 0
+	width: 0;
+	height: 0;
+	opacity: 0;
 }
 .file_upload .button {
+	position: relative;
 	display: block;
 	float: left;
 	min-width: 190px;
@@ -2052,6 +2094,7 @@ MAIN CSS
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	cursor: pointer;
+	z-index: 9;
 }
 .file_upload .button i {
 	float: right;

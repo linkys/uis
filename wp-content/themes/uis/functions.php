@@ -312,10 +312,13 @@ add_action('init', function() {
     $url_path = trim(parse_url(add_query_arg(array()), PHP_URL_PATH), '/');
 
     if ( $url_path === 'personal-application' ) {
-        locate_template('pages/app-page.php', true); exit;
+        locate_template('pages/app-1-step.php', true); exit;
     }
     if ( $url_path === 'personal-application/optimization' ) {
-        locate_template('pages/app-page.php', true); exit;
+        locate_template('pages/app-2-step.php', true); exit;
+    }
+    if ( $url_path === 'personal-application/submission' ) {
+        locate_template('pages/app-3-step.php', true); exit;
     }
 
 });

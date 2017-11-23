@@ -30,3 +30,7 @@ Theme Name: UIS
 #wpgmza_map {
     float: none !important;
 }
+
+.easy-autocomplete {
+    width: 100% !important;
+}

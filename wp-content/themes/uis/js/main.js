@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-    $("[name=country]").easyAutocomplete({
+    $(".country-select").easyAutocomplete({
         url: "/countries.json",
         getValue: "name",
         list: {

@@ -47,15 +47,14 @@ jQuery(document).ready(function($) {
         var url = $(form).attr('action');
         var formdata = form.serializeArray();
         var data = {};
+
         $(formdata ).each(function(index, obj){
             data[obj.name] = obj.value;
         });
 
-
-
         $.post(url, data, function (data) {
             if(data.result){
-
+                alert('save!');
             } else {
                 if( data.errors !== undefined ) {
 
