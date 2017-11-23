@@ -1704,6 +1704,10 @@ MAIN CSS
 	padding-left: 50px;
 }
 
+.terms .ttu {
+	text-transform: uppercase;
+}
+
 
 /*-------------------PERSONAL APPLICATION-------------------*/
 .container-md {
