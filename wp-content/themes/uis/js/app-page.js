@@ -63,9 +63,9 @@ jQuery(document).ready(function($) {
                     });
 
                     $.each(data.errors, function (i, item) {
-                        $(form).find('[name='+ i +']').closest('.app-col').find('.error-message').remove();
-                        $('<p class="error-message"></p>').insertAfter($(form).find('[name='+ i +']'));
-                        $(form).find('[name='+ i +']').closest('.app-col').addClass('has-error').find('.error-message').text(item);
+                        $(form).find('[name="'+ i +'"]').closest('.app-col').find('.error-message').remove();
+                        $('<p class="error-message"></p>').insertAfter($(form).find('[name="'+ i +'"]'));
+                        $(form).find('[name="'+ i +'"]').closest('.app-col').addClass('has-error').find('.error-message').text(item);
                     });
                 }
             }
@@ -75,6 +75,31 @@ jQuery(document).ready(function($) {
 
     $('input, input').on('change, blur, keyup', function () {
         $(this).closest('.app-col').removeClass('has-error');
+    });
+
+    $('[name=jobsCount]').on('change', function (e) {
+
+        var changeToCurrent = $(this).val();
+
+        $('.job-description .app-row').show().each(function (i) {
+            if(i >= changeToCurrent) {
+                $(this).hide();
+            }
+        });
+
+    });
+
+    $('[name=children]').on('change', function (e) {
+
+        var changeToCurrent = $(this).val();
+
+        $('.depends-holder .app-row').show().each(function (i) {
+            console.log(22);
+            if(i >= changeToCurrent) {
+                $(this).hide();
+            }
+        });
+
     });
 
 });

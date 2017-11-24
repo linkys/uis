@@ -2,6 +2,8 @@
 
 global $post;
 
+$tab_8 = unserialize(get_user_meta(get_current_user_id(), 'tab_8', true));
+
 get_header(); ?>
 
     <div class="application bg-white">
@@ -65,25 +67,7 @@ get_header(); ?>
                         <div class="tab-content" data-tab="equal-7"></div>
 
                         <div class="tab-content tab-content_active" data-tab="equal-8">
-
-                            <div class="app-row">
-                                <div class="app-col">
-                                    <div class="app-form-group">
-                                        <label class="app-form-label">Upload Retainer Agreement</label>
-                                        <div class="app-file-group">
-                                            <label class="file_upload clearfix">
-														<span class="button clearfix">
-															Choose file
-															<i class="i-upload"></i>
-														</span>
-                                                <mark>No file choosen</mark>
-                                                <input type="file">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php include "tabs/tab-8.php"; ?>
                         </div>
                     </div>
                 </div>

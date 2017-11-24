@@ -82,6 +82,7 @@ function application_save_tab() {
             break;
 
         case 3:
+
             if($data['work-1'] == '') {
                 $errors['work-1'] = 'This field is required';
             }
@@ -132,6 +133,74 @@ function application_save_tab() {
                 $errors['frenchSpeakingLevel'] = 'This field is required';
             }
             break;
+
+        case 5:
+
+            if($data['adaptability-1'] == '') {
+                $errors['adaptability-1'] = 'This field is required';
+            }
+            if($data['adaptability-2'] == '') {
+                $errors['adaptability-2'] = 'This field is required';
+            }
+            if($data['adaptability-3'] == '') {
+                $errors['adaptability-3'] = 'This field is required';
+            }
+            if($data['adaptability-4'] == '') {
+                $errors['adaptability-4'] = 'This field is required';
+            }
+            if($data['adaptability-5'] == '') {
+                $errors['adaptability-5'] = 'This field is required';
+            }
+            if($data['adaptability-4'] != 'I do not have a spouse') {
+                if ($data['partnerDegree'] == '') {
+                    $errors['partnerDegree'] = 'This field is required';
+                }
+                if ($data['partnerEducationYears'] == '') {
+                    $errors['partnerEducationYears'] = 'This field is required';
+                }
+            }
+            if($data['partnerEnglishReading'] == '') {
+                $errors['partnerEnglishReading'] = 'This field is required';
+            }
+            if($data['partnerEnglishListening'] == '') {
+                $errors['partnerEnglishListening'] = 'This field is required';
+            }
+            if($data['partnerEnglishWriting'] == '') {
+                $errors['partnerEnglishWriting'] = 'This field is required';
+            }
+            if($data['partnerEnglishSpeaking'] == '') {
+                $errors['partnerEnglishSpeaking'] = 'This field is required';
+            }
+            if($data['partnerFrenchReading'] == '') {
+                $errors['partnerFrenchReading'] = 'This field is required';
+            }
+            if($data['partnerFrenchListening'] == '') {
+                $errors['partnerFrenchListening'] = 'This field is required';
+            }
+            if($data['partnerFrenchWriting'] == '') {
+                $errors['partnerFrenchWriting'] = 'This field is required';
+            }
+            if($data['partnerFrenchSpeaking'] == '') {
+                $errors['partnerFrenchSpeaking'] = 'This field is required';
+            }
+            if($data['partnerFamily'] == '') {
+                $errors['partnerFamily'] = 'This field is required';
+            }
+            break;
+
+        case 6:
+
+//            foreach($data['depends'] as $key => $item) {
+//                if($item['firstName'] == '') {
+//                    $errors['depends['.$key.']firstName'] = 'This field is required';
+//                }
+//                if($item['lastName'] == '') {
+//                    $errors['depends['.$key.']lastName'] = 'This field is required';
+//                }
+//                if($item['dob'] == '') {
+//                    $errors['depends['.$key.']dob'] = 'This field is required';
+//                }
+//            }
     }
 
     if(empty($errors)) {

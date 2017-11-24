@@ -14,28 +14,41 @@
         </div>
     </div>
 
-    <div class="app-row">
+    <div class="job-description">
 
-        <div class="app-col app-col-4">
-            <div class="app-form-group">
-                <label class="app-form-label">Job #1 Description</label>
-                <input type="text" class="app-form-text">
-                <a href="#" class="add">+ Add new job</a>
-            </div>
-        </div>
+        <?php for($i = 1; $i <= 15; $i++) : ?>
+            <div class="app-row" <?php echo $i > $tab_3['jobsCount'] ? 'style="display:none"' : '' ?>>
+                <div class="app-col app-col-4">
+                    <div class="app-form-group">
+                        <label class="app-form-label">Job #<?php echo $i ?> Description</label>
+                        <input type="text" class="app-form-text" name="jobs[<?php echo $i ?>][description]" value="<?php echo isset($tab_3['jobs'][$i]['description']) ? $tab_3['jobs'][$i]['description'] : '' ?>">
+                    </div>
+                </div>
 
-        <div class="app-col app-col-5th">
-            <div class="app-form-group">
-                <label class="app-form-label">Job #1 Years of experience</label>
-                <select>
-                    <option value="Less than 1 year">Less than 1 year</option>
-                    <option value="1 year">1 year</option>
-                    <option value="2-3 years">2-3 years</option>
-                    <option value="4-5 years">4-5 years</option>
-                    <option value="6 years or more">6 years or more</option>
-                </select>
+                <div class="app-col app-col-5th">
+                    <div class="app-form-group">
+                        <label class="app-form-label">Job #<?php echo $i ?> Years of experience</label>
+                        <select name="jobs[<?php echo $i ?>][years]">
+
+                            <?php
+                            $estimated_worth = [
+                                'Less than 1 year',
+                                '1 year',
+                                '2-3 years',
+                                '4-5 years',
+                                '6 years or more',
+                            ];
+                            ?>
+
+                            <?php foreach($estimated_worth as $item) : ?>
+                                <option value="<?php echo $item ?>" <?php echo isset($tab_3['jobs'][$i]['years']) && $tab_3['jobs'][$i]['years'] == $item ? 'selected' : ''  ?>><?php echo $item ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </div>
+        <?php endfor; ?>
+
     </div>
 
     <div class="app-row">

@@ -259,6 +259,24 @@ function my_show_extra_profile_fields( $user ) { ?>
             </td>
         </tr>
 
+        <tr>
+            <th scope="row">Application steps</th>
+
+            <td>
+                <fieldset>
+                    <label>
+                        <input name="step_1_activated" type="checkbox" id="step_1_activated" value="1" <?php echo esc_attr( get_the_author_meta( 'step_1_activated', $user->ID ) ) == '1' ? 'checked="checked" disabled="disabled"' : ''; ?>>
+                        1st Step Activated</label><br>
+                    <label>
+                        <input name="step_2_activated" type="checkbox" id="step_2_activated" value="1" <?php echo esc_attr( get_the_author_meta( 'step_2_activated', $user->ID ) ) == '1' ? 'checked="checked" disabled="disabled"' : ''; ?>>
+                        2nd Step Activated</label><br>
+                    <label>
+                        <input name="step_3_activated" type="checkbox" id="step_3_activated" value="1" <?php echo esc_attr( get_the_author_meta( 'step_3_activated', $user->ID ) ) == '1' ? 'checked="checked" disabled="disabled"' : ''; ?>>
+                        3rd Step Activated</label><br>
+                </fieldset>
+            </td>
+        </tr>
+
     </table>
 <?php }
 
@@ -269,6 +287,37 @@ function my_save_extra_profile_fields( $user_id ) {
 
     if ( !current_user_can( 'edit_user', $user_id ) )
         return false;
+
+    if(isset($_POST['step_1_activated']) && $_POST['step_1_activated'] && !get_the_author_meta( 'step_1_activated', $user_id )) {
+
+        $to = $_POST['email'];
+        $subject = 'Step is completed';
+        $message = 'Step 1 is completed. Please proceed to the next step: ' . site_url('/personal-application/optimization');
+
+        wp_mail($to, $subject, $message);
+
+        update_user_meta( $user_id, 'step_1_activated', $_POST['step_1_activated'] );
+    }
+    if(isset($_POST['step_2_activated']) && $_POST['step_2_activated'] && !get_the_author_meta( 'step_2_activated', $user_id )) {
+
+        $to = $_POST['email'];
+        $subject = 'Step is completed';
+        $message = 'Step 2 is completed. Please proceed to the next step: ' . site_url('/personal-application/submission');
+
+        wp_mail($to, $subject, $message);
+
+        update_user_meta( $user_id, 'step_2_activated', $_POST['step_2_activated'] );
+    }
+    if(isset($_POST['step_3_activated']) && $_POST['step_3_activated'] && !get_the_author_meta( 'step_3_activated', $user_id )) {
+
+        $to = $_POST['email'];
+        $subject = 'Step is completed';
+        $message = 'Step 3 is completed.';
+
+        wp_mail($to, $subject, $message);
+
+        update_user_meta( $user_id, 'step_3_activated', $_POST['step_3_activated'] );
+    }
 
     update_user_meta( $user_id, 'phone', $_POST['phone'] );
     update_user_meta( $user_id, 'country', $_POST['country'] );
@@ -322,7 +371,3 @@ add_action('init', function() {
     }
 
 });
-
-function is_profile() {
-    return (bool)preg_match('#^\/personal-application#', $_SERVER['REQUEST_URI']);
-}

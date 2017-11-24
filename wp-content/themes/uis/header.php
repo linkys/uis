@@ -27,10 +27,6 @@
                     </div>
                     <div class="header-actions">
                         <?php if(is_user_logged_in()) : ?>
-                            <a href="<?php echo home_url('/personal-application') ; ?>" class="login">
-                                <i class="i-login"></i>
-                                <span>Personal Applications</span>
-                            </a>
                             <a href="<?php echo wp_logout_url( home_url() ); ?>" class="login">
                                 <i class="i-login"></i>
                                 <span>Logout</span>

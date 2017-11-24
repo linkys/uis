@@ -139,11 +139,42 @@ function login_user() {
 add_action( 'admin_post_nopriv_login_user', 'login_user' );
 add_action( 'admin_post_login_user', 'login_user' );
 
+function is_profile() {
+    return (bool)preg_match('#^\/personal-application#', $_SERVER['REQUEST_URI']);
+}
+
 if($_SERVER['REQUEST_URI'] == '/login/' && is_user_logged_in()) {
     wp_redirect( site_url());
     exit;
 }
-if($_SERVER['REQUEST_URI'] == '/personal-application/' && !is_user_logged_in()) {
+if(is_profile() && !is_user_logged_in()) {
+    wp_redirect( site_url());
+    exit;
+}
+
+
+
+if(
+    trim($_SERVER['REQUEST_URI'], '/') == 'personal-application' &&
+    get_user_meta(get_current_user_id(), 'step_1_activated', true)
+) {
+    wp_redirect( site_url());
+    exit;
+}
+if(
+    trim($_SERVER['REQUEST_URI'], '/') == 'personal-application/optimization' &&
+    (get_user_meta(get_current_user_id(), 'step_2_activated', true) ||
+    !get_user_meta(get_current_user_id(), 'step_1_activated', true))
+) {
+    wp_redirect( site_url());
+    exit;
+}
+if(
+    trim($_SERVER['REQUEST_URI'], '/') == 'personal-application/submission' &&
+    (get_user_meta(get_current_user_id(), 'step_3_activated', true) ||
+    !get_user_meta(get_current_user_id(), 'step_1_activated', true) ||
+    !get_user_meta(get_current_user_id(), 'step_2_activated', true))
+) {
     wp_redirect( site_url());
     exit;
 }
