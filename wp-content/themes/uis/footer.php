@@ -1,4 +1,6 @@
 <?php if( get_query_var('pagename') != 'login' && !is_profile() ) : ?>
+
+<?php if( get_query_var('pagename') != 'terms-of-use' ) : ?>
 <!-- SEO -->
 <div class="seo">
     <div class="container">
@@ -15,6 +17,7 @@
     </div>
 </div>
 <!-- SEO END -->
+<?php endif; ?>
 
 <!-- FOOTER -->
 <footer class="footer">

@@ -11,7 +11,8 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="ielts">
+                        <input type="hidden" class="hidden-file" name="ielts-file">
                     </label>
                 </div>
             </div>
@@ -29,7 +30,8 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="edu-certificate">
+                        <input type="hidden" class="hidden-file" name="edu-certificate-file">
                     </label>
                 </div>
             </div>
@@ -47,7 +49,8 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="dependents-id">
+                        <input type="hidden" class="hidden-file" name="dependents-id-file">
                     </label>
                 </div>
             </div>
@@ -65,7 +68,8 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="police-check">
+                        <input type="hidden" class="hidden-file" name="police-check-file">
                     </label>
                 </div>
             </div>
@@ -83,11 +87,16 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="medical-test">
+                        <input type="hidden" class="hidden-file" name="medical-test-file">
                     </label>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="app-footer-inner clearfix">
+        <a href="#" class="app-footer-btn next-tab-btn">Next</a>
     </div>
 
     <input type="hidden" name="action" value="application_save_tab">

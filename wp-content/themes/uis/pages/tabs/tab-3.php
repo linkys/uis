@@ -177,7 +177,8 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="cv">
+                        <input type="hidden" class="hidden-file" name="cv-file">
                     </label>
                 </div>
             </div>

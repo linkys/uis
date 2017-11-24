@@ -11,11 +11,16 @@
 															<i class="i-upload"></i>
 														</span>
                         <mark>No file choosen</mark>
-                        <input type="file">
+                        <input type="file" name="retainer-agreement">
+                        <input type="hidden" class="hidden-file" name="retainer-agreement-file">
                     </label>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="app-footer-inner clearfix">
+        <a href="#" class="app-footer-btn next-tab-btn">Next</a>
     </div>
 
     <input type="hidden" name="action" value="application_save_tab">

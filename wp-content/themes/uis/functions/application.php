@@ -58,6 +58,12 @@ function application_save_tab() {
             if($data['health'] == '') {
                 $errors['health'] = 'This field is required';
             }
+            if($data['passportID-file'] == '') {
+                $errors['passportID-file'] = 'This field is required';
+            }
+            if($data['utilityBill-file'] == '') {
+                $errors['utilityBill-file'] = 'This field is required';
+            }
             break;
 
         case 2:
@@ -97,6 +103,9 @@ function application_save_tab() {
             }
             if($data['transferMoney'] == '') {
                 $errors['transferMoney'] = 'This field is required';
+            }
+            if($data['cv-file'] == '') {
+                $errors['cv-file'] = 'This field is required';
             }
             break;
 
@@ -201,6 +210,31 @@ function application_save_tab() {
 //                    $errors['depends['.$key.']dob'] = 'This field is required';
 //                }
 //            }
+            break;
+
+        case 7:
+            if($data['ielts-file'] == '') {
+                $errors['ielts-file'] = 'This field is required';
+            }
+            if($data['edu-certificate-file'] == '') {
+                $errors['edu-certificate-file'] = 'This field is required';
+            }
+            if($data['dependents-id-file'] == '') {
+                $errors['dependents-id-file'] = 'This field is required';
+            }
+            if($data['police-check-file'] == '') {
+                $errors['police-check-file'] = 'This field is required';
+            }
+            if($data['medical-test-file'] == '') {
+                $errors['medical-test-file'] = 'This field is required';
+            }
+            break;
+
+        case 8:
+            if($data['retainer-agreement-file'] == '') {
+                $errors['retainer-agreement-file'] = 'This field is required';
+            }
+            break;
     }
 
     if(empty($errors)) {

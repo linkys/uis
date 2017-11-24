@@ -37,6 +37,17 @@ jQuery(document).ready(function($) {
                 btn.text( "Choose file" );
             }else
                 btn.text( file_name );
+
+            var FR= new FileReader();
+
+            FR.addEventListener("load", function(e) {
+
+                $('[name='+inp.attr('name')+'-file]').val(e.target.result);
+
+            });
+
+            FR.readAsDataURL( this.files[0] );
+
         }).change();
     });
 
@@ -51,6 +62,11 @@ jQuery(document).ready(function($) {
         $(formdata ).each(function(index, obj){
             data[obj.name] = obj.value;
         });
+
+        $(form).find('.hidden-file').each(function (index, obj) {
+            data[$(obj).attr('name')] = $(obj).val();
+        });
+
 
         $.post(url, data, function (data) {
             if(data.result){
@@ -94,7 +110,6 @@ jQuery(document).ready(function($) {
         var changeToCurrent = $(this).val();
 
         $('.depends-holder .app-row').show().each(function (i) {
-            console.log(22);
             if(i >= changeToCurrent) {
                 $(this).hide();
             }

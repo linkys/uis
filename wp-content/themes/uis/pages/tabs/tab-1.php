@@ -190,6 +190,7 @@
                                                     </span>
                         <mark>No file choosen</mark>
                         <input type="file" name="passportID">
+                        <input type="hidden" class="hidden-file" name="passportID-file">
                     </label>
                 </div>
             </div>
@@ -208,6 +209,7 @@
                                                     </span>
                         <mark>No file choosen</mark>
                         <input type="file" name="utilityBill">
+                        <input type="hidden" class="hidden-file" name="utilityBill-file">
                     </label>
                 </div>
             </div>
